@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.21)  2 JUN 2024 02:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.9.21)  2 JUN 2024 22:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -812,12 +812,12 @@ Package hyperref Info: Link coloring OFF on input line 40.
 \openout6 = `rapport.nlo'.
 
 Package nomencl Info: Writing nomenclature file rapport.nlo on input line 42.
-<um5.png, id=52, 164.4544pt x 116.2744pt>
+<um5.png, id=80, 164.4544pt x 116.2744pt>
 File: um5.png Graphic file (type png)
 <use um5.png>
 Package pdftex.def Info: um5.png  used on input line 63.
 (pdftex.def)             Requested size: 122.91785pt x 86.90572pt.
-<ENSIAS.png, id=54, 164.4544pt x 164.4544pt>
+<ENSIAS.png, id=82, 164.4544pt x 164.4544pt>
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 65.
@@ -830,7 +830,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<logo.png, id=55, 501.875pt x 501.875pt>
+<logo.png, id=83, 501.875pt x 501.875pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 93.
@@ -943,23 +943,23 @@ Chapitre 2.
 [11
 
 ]
-<gantt1.png, id=143, 1201.48875pt x 146.5475pt>
+<gantt1.png, id=185, 1201.48875pt x 146.5475pt>
 File: gantt1.png Graphic file (type png)
 <use gantt1.png>
 Package pdftex.def Info: gantt1.png  used on input line 220.
 (pdftex.def)             Requested size: 455.24411pt x 55.52762pt.
-<gantt2.png, id=144, 928.46875pt x 130.4875pt>
+<gantt2.png, id=186, 928.46875pt x 130.4875pt>
 File: gantt2.png Graphic file (type png)
 <use gantt2.png>
 Package pdftex.def Info: gantt2.png  used on input line 221.
 (pdftex.def)             Requested size: 455.24411pt x 63.98123pt.
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 225.
+Package pdftex.def Info: um5.png  used on input line 227.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 225.
+Package pdftex.def Info: ENSIAS.png  used on input line 227.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
  [12 <./gantt1.png (PNG copy)> <./gantt2.png (PNG copy)>]
 Chapitre 3.
@@ -968,13 +968,77 @@ Chapitre 3.
 ]
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 271.
+Package pdftex.def Info: um5.png  used on input line 273.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 271.
+Package pdftex.def Info: ENSIAS.png  used on input line 273.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
  [14]
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 291.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 291.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [15]
+Chapitre 4.
+[16
+
+]
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 354.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 354.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [17]
+<uml-client_gratuit.png, id=234, 774.895pt x 845.1575pt>
+File: uml-client_gratuit.png Graphic file (type png)
+<use uml-client_gratuit.png>
+Package pdftex.def Info: uml-client_gratuit.png  used on input line 359.
+(pdftex.def)             Requested size: 455.24411pt x 496.52365pt.
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 362.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 362.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [18 <./uml-client_gratuit.png>]
+<uml-Client_abonne.png, id=241, 776.9025pt x 643.40375pt>
+File: uml-Client_abonne.png Graphic file (type png)
+<use uml-Client_abonne.png>
+Package pdftex.def Info: uml-Client_abonne.png  used on input line 366.
+(pdftex.def)             Requested size: 455.24411pt x 377.0229pt.
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 369.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 369.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [19 <./uml-Client_abonne.png>]
+<uml-Admin.png, id=247, 616.3025pt x 522.95375pt>
+File: uml-Admin.png Graphic file (type png)
+<use uml-Admin.png>
+Package pdftex.def Info: uml-Admin.png  used on input line 373.
+(pdftex.def)             Requested size: 455.24411pt x 386.30144pt.
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 377.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 377.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [20 <./uml-Admin.png>]
 \openout4 = `./transscr.sh'.
 
 
@@ -985,29 +1049,29 @@ Package pdftricks2 Warning: ****************************************
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 292.
+Package pdftex.def Info: um5.png  used on input line 389.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 292.
+Package pdftex.def Info: ENSIAS.png  used on input line 389.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[15] (./rapport.aux)
+[21] (./rapport.aux)
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 2FF5A63774CD736D22034453A557DDBC;2002.
+(rerunfilecheck)             Checksum: C77CA0F4C190BD21FA8D9C0F52C92501;3223.
  ) 
 Here is how much of TeX's memory you used:
- 27931 strings out of 476025
- 539683 string characters out of 5790017
+ 27985 strings out of 476025
+ 540492 string characters out of 5790017
  1860388 words of memory out of 5000000
- 47893 multiletter control sequences out of 15000+600000
+ 47918 multiletter control sequences out of 15000+600000
  529432 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,16n,106p,902b,1136s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc2074.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb>
-Output written on rapport.pdf (16 pages, 703600 bytes).
+Output written on rapport.pdf (22 pages, 778634 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
- 48 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 329 PDF objects out of 1000 (max. 8388607)
+ 264 compressed objects within 3 object streams
+ 74 named destinations out of 1000 (max. 500000)
+ 193 words of extra memory for PDF output out of 10000 (max. 10000000)
 

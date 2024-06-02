@@ -222,6 +222,8 @@ culminated in the development of a web application that allows users to perform 
     \caption{Diagramme de Gantt}
 \end{figure}
 
+
+
 \newpage
 %Chapter 3
 \chapter{Le Web Scraping}
@@ -285,6 +287,101 @@ culminated in the development of a web application that allows users to perform 
 \large{
 \par En suivant cette méthodologie, nous avons pu obtenir une base de données fiable et complète, essentielle pour le fonctionnement de notre simulateur de calcul des prix des transactions immobilières.\par
 }
+
+\newpage
+\chapter{Analyse et Conception}
+\section{Identification des Acteurs}
+\vspace{0.5cm}
+\begin{enumerate}
+    \item \textbf{Utilisateurs Finaux}
+    \begin{itemize}
+        \item[$\bullet$] \textbf{Clients Gratuits}: Utilisateurs qui accèdent aux fonctionnalités de base pour effectuer des estimations simples et recevoir des notifications par défaut.
+        \item[$\bullet$] \textbf{Clients Abonnés}: Utilisateurs payants ayant accès à des fonctionnalités avancées, incluant des estimations complexes, des notifications personnalisées, et des graphiques d'évolution des prix.
+    \end{itemize}
+    \item \textbf{Administrateurs}
+    \begin{itemize}
+        \item[$\bullet$] \textbf{Admin}: Utilisateurs responsables de la gestion et de la surveillance de l'application, y compris la gestion des utilisateurs, le contrôle de la fréquence de scraping .
+    \end{itemize}
+\end{enumerate}
+
+\section{Besoins Fonctionnels}
+\vspace{0.5cm}
+\begin{enumerate}
+    \item \textbf{Estimation de Prix}
+    \begin{itemize}
+        \item[$\bullet$] Permettre aux utilisateurs de saisir les caractéristiques d'un bien immobilier (type de bien, localisation, surface, nombre de pièces, etc.).
+        \item[$\bullet$] Générer des estimations de prix de vente ou de location basées sur les données collectées et nettoyées.
+    \end{itemize}
+    \newpage
+    \item \textbf{Notifications}
+    \begin{itemize}
+        \item[$\bullet$] Envoyer des notifications aux utilisateurs concernant les évolutions de prix des biens immobiliers similaires.
+        \item[$\bullet$] Permettre aux utilisateurs abonnés de personnaliser leurs notifications selon leurs préférences.
+    \end{itemize}
+    \item \textbf{Tableau de Bord}
+    \begin{itemize}
+        \item[$\bullet$] Offrir un tableau de bord interactif pour les utilisateurs abonnés, affichant des graphiques et des indicateurs sur les tendances des prix.
+        \item[$\bullet$] Fournir un tableau de bord administratif pour surveiller la performance du système, gérer les utilisateurs, et configurer la fréquence de scraping.
+    \end{itemize}
+    \item \textbf{Gestion des Utilisateurs}
+    \begin{itemize}
+        \item[$\bullet$] Permettre l'inscription et la gestion des comptes utilisateurs.
+        \item[$\bullet$] Gérer les plans d'abonnement et les paiements .
+    \end{itemize}
+    \item \textbf{Automatisation }
+    \begin{itemize}
+        \item[$\bullet$] Automatiser le processus de scraping et de nettoyage des données.
+    \end{itemize}
+\end{enumerate}
+
+\section{Besoins Non Fonctionnels}
+\vspace{0.5cm}
+\begin{enumerate}
+    \item \textbf{Sécurité}
+    \begin{itemize}
+        \item[$\bullet$] Garantir la sécurité des données des utilisateurs, y compris la protection des informations personnelles et des données de paiement.
+    \end{itemize}
+    \item \textbf{Scalabilité}
+    \begin{itemize}
+        \item[$\bullet$] Concevoir l'application de manière à pouvoir évoluer pour gérer une augmentation du nombre d'utilisateurs et de données à traiter.
+    \end{itemize}
+    \item \textbf{Maintenance}
+    \begin{itemize}
+        \item[$\bullet$] Faciliter la maintenance et les mises à jour de l'application, avec une documentation complète et des procédures de sauvegarde régulières.
+    \end{itemize}
+\end{enumerate}
+
+\newpage
+\section{Diagramme de cas d'utilsation}
+\vspace{0.5cm}
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=\textwidth]{uml-client_gratuit.png}
+    \caption{Diagramme de cas d'utilsation "Client Gratuit"}
+\end{figure}
+\newpage
+\vspace*{3.5cm}
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=\textwidth]{uml-Client_abonne.png}
+    \caption{Diagramme de cas d'utilsation "Client Abonné"}
+\end{figure}
+\newpage
+\vspace*{3.5cm}
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=\textwidth]{uml-Admin.png}
+    \caption{Diagramme de cas d'utilsation "Admin"}
+\end{figure}
+
+\newpage
+
+\section{Diagramme d'activités}
+\vspace{0.5cm}
+\section{Diagramme de classes}
+\vspace{0.5cm}
+ 
+
 
 
 
