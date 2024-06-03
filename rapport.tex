@@ -389,7 +389,51 @@ culminated in the development of a web application that allows users to perform 
 \newpage
 \section{Diagramme de classes}
 \vspace{0.5cm}
-
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=\textwidth]{class.png}
+    \caption{Diagramme de classes}
+\end{figure}
+\par Dans ce diagramme de classe, l'attribut \textit{\_id} de type string renvoie à la clé primaire générée automatiquement par \textbf{MongoDB}, le système de gestion de base de données utilisé par notre application. La classe User se distingue par ses identifiants, à l'exception du mot de passe, car nous utilisons un service dédié à l'authentification appelé \textbf{Kindle}. Les rôles sont définis par des désignations (client ou administrateur).
+\\ \par
+Les diagrammes sont catégorisés par leurs types (nuage de points, diagramme en barres, diagramme linéaire), ce qui détermine la manière dont les statistiques seront visualisées. Ces statistiques dépendent de divers critères de filtrage pour produire des indicateurs de performance clés (\textbf{KPI}), sauvegardés sous forme de requêtes \textbf{MongoDB}.
+\\ \par
+Les utilisateurs non abonnés peuvent obtenir des notifications simples en choisissant une fréquence de notification. En revanche, les utilisateurs abonnés peuvent obtenir des informations plus détaillées sur les annonces dans ces notifications.
+\\ \par
+Pour ce qui est des annonces, la classe Property représente la structure de leurs informations. Toutes ces propriétés partagent des attributs fondamentaux comme le titre, la description, et le prix. Les différences apparaissent lors du traitement de différents types de biens immobiliers ou de transactions. Cette fragmentation améliore les performances en éliminant la nécessité de filtrer les documents ou d'effectuer des jointures pour obtenir les annonces ciblées. Avec cinq types de biens immobiliers (appartements, maisons, villas, bureaux, locaux commerciaux) et deux types de transactions (location, vente), le nombre de classes peut devenir important. Il suffit donc de représenter les attributs partagés et de noter les différences entre ces classes. Ces variations sont présentées dans le tableau suivant :
+\begin{table}[htbp]
+    \centering
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{|l|l|l|l|l|}
+  \hline
+  Appartement & Maisons & Villas & Bureaux & Locaux commerciaux \\
+  \hline
+  Age du bien & Age du bien & Age du bien & Num d'étage & Nbr de Salles de bain \\
+  Nbr d'étages & Nbr d'étages & Nbr d'étages & Nbr de pièces &  \\
+  Nbr de chambres & Nbr de chambres & Nbr de chambres & Nbr de Salles de bain &  \\
+  Nbr de Salons & Nbr de Salons & Nbr de Salons &  &  \\
+  Nbr de Salles de bain & Nbr de Salles de bain & Nbr de Salles de bain &  & \\
+  \hline
+  Balcon & Parking & Parking & Parking & Climatisation \\
+  Ascenseur & Garage & Garage & Climatisation & Chauffage \\
+  Terrasse & Balcon & Balcon & Chauffage & Sécurité \\
+  Meublée & Terrasse & Terrasse & Sécurité & Parking \\
+  Climatisation & Meublée & Meublée & Ascenseur & \\
+  Chauffage & Climatisation & Climatisation & Terrasse & \\
+  Cuisine équipée & Chauffage & Chauffage &  & \\
+  Concierge & Cuisine équipée & Cuisine équipée &  & \\
+  Sécurité & Jardin & Jardin &  & \\
+  Parking & Sécurité & Sécurité &  & \\
+  & Piscine & Piscine &  & \\
+  \hline
+\end{tabular}}
+    \caption{tableau des attributs}
+    \label{tab:tableau des attributs}
+\end{table}
+\vspace{1cm}
+\par
+La première ligne indique le type de bien immobilier, la deuxième énumère les attributs supplémentaires spécifiques à ce type, et la troisième liste les options additionnelles
+associées à ce bien immobilier.
 \newpage
 \chapter{Réalisation du projet}
 \section{Collecte, exploration, nettoyage et modélisation}
@@ -428,6 +472,12 @@ En raison des règles de validation limitées des sites web sources, nous avons 
 Après avoir nettoyé les données, nous sommes finalement prêts à entraîner un modèle pour prédire ou estimer le prix, après avoir appliqué la technique du one-hot encoding. Nous avons choisi d’utiliser la forêt d'arbres décisionnels en raison de sa robustesse aux valeurs aberrantes et aux données non équilibrées, ainsi que de sa capacité à représenter les relations complexes. Malheureusement, elle s'est avérée incapable de prédire le prix avec une bonne précision (marge de 1000 dirhams).
 \\ \par
 Ensuite, nous avons utilisé la régression linéaire. Cette dernière permet de détecter les relations linéaires entre le prix et les autres attributs. Cette fois, le modèle s'est révélé performant en termes de précision et de rapidité, avec une marge inférieure à 20 dirhams.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{web-scrapping-architecture.png}
+    \caption{data pipeline}
+    \label{fig:data pipeline}
+\end{figure}
 \newpage
 \section{Choix techniques}
 \subsection{scrapy}
@@ -608,4 +658,37 @@ OpenAI est une organisation de recherche en intelligence artificielle (IA) à bu
 L'API OpenAI est conçue pour être intuitive et accessible à un large public, des développeurs débutants aux experts en IA. Elle fournit un ensemble d'outils et de services permettant d'interagir avec les modèles d'IA développés par OpenAI. Ces modèles couvrent une large gamme de tâches, notamment la génération de texte, la traduction des langues, la classification d'images et la création de code.
 \\ \par
 Grâce à l'API OpenAI, les développeurs peuvent facilement intégrer ces capacités d'IA dans leurs applications, ouvrant la voie à de nouvelles possibilités innovantes. Par exemple, un développeur pourrait utiliser l'API pour créer un chatbot conversationnel pour un service client, un outil de rédaction assistée par intelligence artificielle ou une application de traduction en temps réel. L'API OpenAI permet ainsi de repousser les limites de ce qui est possible avec l'IA et d'accélérer le développement d'applications intelligentes et performantes.
+\newpage
+\section{Captures d'écran}
+Aperçu de notre application en captures d'écran :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{screens/home.png}
+    \caption{page d'accueil}
+    \label{fig:page d'accueil}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{screens/pricing.png}
+    \caption{page de tarification}
+    \label{fig:page de tarification}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{screens/estimation.png}
+    \caption{page d'estimation de prix}
+    \label{fig:page d'estimation de prix}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{screens/estimation2.png}
+    \caption{page d'évolution des prix}
+    \label{fig:page d'évolution des prix}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{screens/notif.png}
+    \caption{page de notifications}
+    \label{fig:page de notifications}
+\end{figure}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.2)  3 JUN 2024 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.2)  3 JUN 2024 21:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -818,12 +818,12 @@ Package hyperref Info: Link coloring OFF on input line 40.
 \openout6 = `rapport.nlo'.
 
 Package nomencl Info: Writing nomenclature file rapport.nlo on input line 42.
-<um5.png, id=155, 164.4544pt x 116.2744pt>
+<um5.png, id=159, 164.4544pt x 116.2744pt>
 File: um5.png Graphic file (type png)
 <use um5.png>
 Package pdftex.def Info: um5.png  used on input line 63.
 (pdftex.def)             Requested size: 122.91785pt x 86.90572pt.
-<ENSIAS.png, id=157, 164.4544pt x 164.4544pt>
+<ENSIAS.png, id=161, 164.4544pt x 164.4544pt>
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 65.
@@ -836,7 +836,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
  (C:\Users\anass\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<logo.png, id=158, 501.875pt x 501.875pt>
+<logo.png, id=162, 501.875pt x 501.875pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 93.
@@ -868,17 +868,26 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.97 \listoffigures
                     [1
 
-] (rapport.lof)
+]
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 97.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 97.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [2] (rapport.lof)
 \tf@lof=\write8
 \openout8 = `rapport.lof'.
 
- [2
+ [3
 
 ] (rapport.lot)
 \tf@lot=\write9
 \openout9 = `rapport.lot'.
 
- [3
+ [4
 
 ]
 File: um5.png Graphic file (type png)
@@ -889,7 +898,7 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 111.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [4]
+ [5]
 File: um5.png Graphic file (type png)
 <use um5.png>
 Package pdftex.def Info: um5.png  used on input line 125.
@@ -898,7 +907,7 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 125.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [5]
+ [6]
 File: um5.png Graphic file (type png)
 <use um5.png>
 Package pdftex.def Info: um5.png  used on input line 143.
@@ -907,7 +916,7 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 143.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [6]
+ [7]
 File: um5.png Graphic file (type png)
 <use um5.png>
 Package pdftex.def Info: um5.png  used on input line 159.
@@ -916,7 +925,7 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 159.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [7]
+ [8]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 167.
  (C:\Users\anass\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -929,9 +938,9 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 170.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [8]
+ [9]
 Chapitre 1.
-[9
+[10
 
 ]
 File: um5.png Graphic file (type png)
@@ -942,17 +951,17 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 193.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [10]
+ [11]
 Chapitre 2.
-[11
+[12
 
 ]
-<gantt1.png, id=308, 1201.48875pt x 146.5475pt>
+<gantt1.png, id=334, 1201.48875pt x 146.5475pt>
 File: gantt1.png Graphic file (type png)
 <use gantt1.png>
 Package pdftex.def Info: gantt1.png  used on input line 220.
 (pdftex.def)             Requested size: 455.24411pt x 55.52762pt.
-<gantt2.png, id=309, 928.46875pt x 130.4875pt>
+<gantt2.png, id=335, 928.46875pt x 130.4875pt>
 File: gantt2.png Graphic file (type png)
 <use gantt2.png>
 Package pdftex.def Info: gantt2.png  used on input line 221.
@@ -965,9 +974,9 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 227.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [12 <./gantt1.png (PNG copy)> <./gantt2.png (PNG copy)>]
+ [13 <./gantt1.png (PNG copy)> <./gantt2.png (PNG copy)>]
 Chapitre 3.
-[13
+[14
 
 ]
 File: um5.png Graphic file (type png)
@@ -978,7 +987,7 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 273.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [14]
+ [15]
 File: um5.png Graphic file (type png)
 <use um5.png>
 Package pdftex.def Info: um5.png  used on input line 291.
@@ -987,9 +996,9 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 291.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [15]
+ [16]
 Chapitre 4.
-[16
+[17
 
 ]
 File: um5.png Graphic file (type png)
@@ -1000,8 +1009,8 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 354.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [17]
-<uml-client_gratuit.png, id=357, 774.895pt x 845.1575pt>
+ [18]
+<uml-client_gratuit.png, id=383, 774.895pt x 845.1575pt>
 File: uml-client_gratuit.png Graphic file (type png)
 <use uml-client_gratuit.png>
 Package pdftex.def Info: uml-client_gratuit.png  used on input line 359.
@@ -1014,8 +1023,8 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 362.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [18 <./uml-client_gratuit.png>]
-<uml-Client_abonne.png, id=364, 776.9025pt x 643.40375pt>
+ [19 <./uml-client_gratuit.png>]
+<uml-Client_abonne.png, id=389, 776.9025pt x 643.40375pt>
 File: uml-Client_abonne.png Graphic file (type png)
 <use uml-Client_abonne.png>
 Package pdftex.def Info: uml-Client_abonne.png  used on input line 366.
@@ -1028,8 +1037,8 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 369.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [19 <./uml-Client_abonne.png>]
-<uml-Admin.png, id=370, 616.3025pt x 522.95375pt>
+ [20 <./uml-Client_abonne.png>]
+<uml-Admin.png, id=395, 616.3025pt x 522.95375pt>
 File: uml-Admin.png Graphic file (type png)
 <use uml-Admin.png>
 Package pdftex.def Info: uml-Admin.png  used on input line 373.
@@ -1042,13 +1051,13 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 376.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [20 <./uml-Admin.png>]
-<activity_account.png, id=376, 869.2475pt x 426.59375pt>
+ [21 <./uml-Admin.png>]
+<activity_account.png, id=401, 869.2475pt x 426.59375pt>
 File: activity_account.png Graphic file (type png)
 <use activity_account.png>
 Package pdftex.def Info: activity_account.png  used on input line 381.
 (pdftex.def)             Requested size: 455.24411pt x 223.41829pt.
-<activity_estimation.png, id=377, 295.1025pt x 298.11375pt>
+<activity_estimation.png, id=402, 295.1025pt x 298.11375pt>
 File: activity_estimation.png Graphic file (type png)
 <use activity_estimation.png>
 Package pdftex.def Info: activity_estimation.png  used on input line 386.
@@ -1061,384 +1070,471 @@ File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
 Package pdftex.def Info: ENSIAS.png  used on input line 389.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [21 <./activity_account.png (PNG copy)> <./activity_estimation.png (PNG copy)>]
+ [22 <./activity_account.png (PNG copy)> <./activity_estimation.png (PNG copy)>]
+<class.png, id=407, 846.16125pt x 473.77pt>
+File: class.png Graphic file (type png)
+<use class.png>
+Package pdftex.def Info: class.png  used on input line 394.
+(pdftex.def)             Requested size: 455.24411pt x 254.8922pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 393.
+Package pdftex.def Info: um5.png  used on input line 434.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 393.
+Package pdftex.def Info: ENSIAS.png  used on input line 434.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
- [22]
+[23 <./class.png (PNG copy)>]
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 437.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 437.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [24]
 Chapitre 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
 
  []
 
-[23
+[25
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 409--410
-
- []
-
-
-Overfull \hbox (4.3819pt too wide) in paragraph at lines 411--412
-[]\T1/cmr/m/n/14.4 Une re-marque im-por-tante concerne l'ana-lyse des at-tri-buts man-quants.Nous
- []
-
-
-Overfull \hbox (10.77742pt too wide) in paragraph at lines 411--412
-\T1/cmr/m/n/14.4 souffre d'er-reurs or-tho-gra-phiques, d'in-co-hé-rences, et par-fois elles ne contiennent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 413--414
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
-
- []
-
-File: um5.png Graphic file (type png)
-<use um5.png>
-Package pdftex.def Info: um5.png  used on input line 420.
-(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
-File: ENSIAS.png Graphic file (type png)
-<use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 420.
-(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
-
- []
-
-File: um5.png Graphic file (type png)
-<use um5.png>
-Package pdftex.def Info: um5.png  used on input line 431.
-(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
-File: ENSIAS.png Graphic file (type png)
-<use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 431.
-(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[25]
-<tech/scrapy.png, id=399, 323.2075pt x 100.375pt>
-File: tech/scrapy.png Graphic file (type png)
-<use tech/scrapy.png>
-Package pdftex.def Info: tech/scrapy.png  used on input line 436.
-(pdftex.def)             Requested size: 227.62206pt x 70.68932pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 441--441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 442--442
-
- []
-
-<tech/scrapeops-logo.png, id=400, 106.14656pt x 139.27031pt>
-File: tech/scrapeops-logo.png Graphic file (type png)
-<use tech/scrapeops-logo.png>
-Package pdftex.def Info: tech/scrapeops-logo.png  used on input line 448.
-(pdftex.def)             Requested size: 91.04742pt x 119.4641pt.
-File: um5.png Graphic file (type png)
-<use um5.png>
-Package pdftex.def Info: um5.png  used on input line 452.
-(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
-File: ENSIAS.png Graphic file (type png)
-<use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 452.
-(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[26 <./tech/scrapy.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 453--454
 
  []
 
+
+Overfull \hbox (4.3819pt too wide) in paragraph at lines 455--456
+[]\T1/cmr/m/n/14.4 Une re-marque im-por-tante concerne l'ana-lyse des at-tri-buts man-quants.Nous
+ []
+
+
+Overfull \hbox (10.77742pt too wide) in paragraph at lines 455--456
+\T1/cmr/m/n/14.4 souffre d'er-reurs or-tho-gra-phiques, d'in-co-hé-rences, et par-fois elles ne contiennent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
+ []
+
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 456.
+Package pdftex.def Info: um5.png  used on input line 464.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 456.
+Package pdftex.def Info: ENSIAS.png  used on input line 464.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[27 <./tech/scrapeops-logo.png>]
-<tech/mongodb.png, id=411, 829.59938pt x 209.28188pt>
-File: tech/mongodb.png Graphic file (type png)
-<use tech/mongodb.png>
-Package pdftex.def Info: tech/mongodb.png  used on input line 460.
-(pdftex.def)             Requested size: 455.24411pt x 114.8435pt.
-
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 465--466
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--468
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
+
+ []
+
+<web-scrapping-architecture.png, id=426, 1184.425pt x 399.4925pt>
+File: web-scrapping-architecture.png Graphic file (type png)
+<use web-scrapping-architecture.png>
+Package pdftex.def Info: web-scrapping-architecture.png  used on input line 477.
+(pdftex.def)             Requested size: 455.24411pt x 153.546pt.
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 481.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 481.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+[27]
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 481.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 481.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [28 <./web-scrapping-architecture.png>]
+<tech/scrapy.png, id=436, 323.2075pt x 100.375pt>
+File: tech/scrapy.png Graphic file (type png)
+<use tech/scrapy.png>
+Package pdftex.def Info: tech/scrapy.png  used on input line 486.
+(pdftex.def)             Requested size: 227.62206pt x 70.68932pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 491--491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--492
+
+ []
+
+<tech/scrapeops-logo.png, id=437, 106.14656pt x 139.27031pt>
+File: tech/scrapeops-logo.png Graphic file (type png)
+<use tech/scrapeops-logo.png>
+Package pdftex.def Info: tech/scrapeops-logo.png  used on input line 498.
+(pdftex.def)             Requested size: 91.04742pt x 119.4641pt.
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 502.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 502.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+[29 <./tech/scrapy.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 470.
+Package pdftex.def Info: um5.png  used on input line 506.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 470.
+Package pdftex.def Info: ENSIAS.png  used on input line 506.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[28 <./tech/mongodb.png>]
-<tech/prisma.png, id=417, 67.75313pt x 20.32594pt>
+[30 <./tech/scrapeops-logo.png>]
+<tech/mongodb.png, id=449, 829.59938pt x 209.28188pt>
+File: tech/mongodb.png Graphic file (type png)
+<use tech/mongodb.png>
+Package pdftex.def Info: tech/mongodb.png  used on input line 510.
+(pdftex.def)             Requested size: 455.24411pt x 114.8435pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 515--516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--518
+
+ []
+
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 520.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 520.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+[31 <./tech/mongodb.png>]
+<tech/prisma.png, id=455, 67.75313pt x 20.32594pt>
 File: tech/prisma.png Graphic file (type png)
 <use tech/prisma.png>
-Package pdftex.def Info: tech/prisma.png  used on input line 474.
+Package pdftex.def Info: tech/prisma.png  used on input line 524.
 (pdftex.def)             Requested size: 273.14923pt x 81.94801pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
+Underfull \hbox (badness 10000) in paragraph at lines 531--532
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 484.
+Package pdftex.def Info: um5.png  used on input line 534.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 484.
+Package pdftex.def Info: ENSIAS.png  used on input line 534.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[29 <./tech/prisma.png>]
-<tech/nextjs.png, id=423, 180.675pt x 180.675pt>
+[32 <./tech/prisma.png>]
+<tech/nextjs.png, id=461, 180.675pt x 180.675pt>
 File: tech/nextjs.png Graphic file (type png)
 <use tech/nextjs.png>
-Package pdftex.def Info: tech/nextjs.png  used on input line 488.
+Package pdftex.def Info: tech/nextjs.png  used on input line 538.
 (pdftex.def)             Requested size: 136.57462pt x 136.57556pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--494
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--496
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 498.
+Package pdftex.def Info: um5.png  used on input line 548.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 498.
+Package pdftex.def Info: ENSIAS.png  used on input line 548.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[30 <./tech/nextjs.png>]
-<tech/tailwind.png, id=430, 248.93pt x 31.11626pt>
+[33 <./tech/nextjs.png>]
+<tech/tailwind.png, id=467, 248.93pt x 31.11626pt>
 File: tech/tailwind.png Graphic file (type png)
 <use tech/tailwind.png>
-Package pdftex.def Info: tech/tailwind.png  used on input line 502.
+Package pdftex.def Info: tech/tailwind.png  used on input line 552.
 (pdftex.def)             Requested size: 227.62206pt x 28.4535pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--508
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--510
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 512.
+Package pdftex.def Info: um5.png  used on input line 562.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 512.
+Package pdftex.def Info: ENSIAS.png  used on input line 562.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[31 <./tech/tailwind.png>]
-<tech/shadcn.png, id=436, 256.96pt x 256.96pt>
+[34 <./tech/tailwind.png>]
+<tech/shadcn.png, id=473, 256.96pt x 256.96pt>
 File: tech/shadcn.png Graphic file (type png)
 <use tech/shadcn.png>
-Package pdftex.def Info: tech/shadcn.png  used on input line 516.
+Package pdftex.def Info: tech/shadcn.png  used on input line 566.
 (pdftex.def)             Requested size: 136.57462pt x 136.57631pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 523--524
+Underfull \hbox (badness 10000) in paragraph at lines 573--574
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 526.
+Package pdftex.def Info: um5.png  used on input line 576.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 526.
+Package pdftex.def Info: ENSIAS.png  used on input line 576.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[32 <./tech/shadcn.png>]
-<tech/tRPC.png, id=442, 513.92pt x 513.92pt>
+[35 <./tech/shadcn.png>]
+<tech/tRPC.png, id=479, 513.92pt x 513.92pt>
 File: tech/tRPC.png Graphic file (type png)
 <use tech/tRPC.png>
-Package pdftex.def Info: tech/tRPC.png  used on input line 530.
+Package pdftex.def Info: tech/tRPC.png  used on input line 580.
 (pdftex.def)             Requested size: 227.62206pt x 227.62328pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 538.
+Package pdftex.def Info: um5.png  used on input line 588.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 538.
+Package pdftex.def Info: ENSIAS.png  used on input line 588.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[33 <./tech/tRPC.png>]
-<tech/kinde.jpeg, id=448, 200.75pt x 200.75pt>
+[36 <./tech/tRPC.png>]
+<tech/kinde.jpeg, id=486, 200.75pt x 200.75pt>
 File: tech/kinde.jpeg Graphic file (type jpg)
 <use tech/kinde.jpeg>
-Package pdftex.def Info: tech/kinde.jpeg  used on input line 542.
+Package pdftex.def Info: tech/kinde.jpeg  used on input line 592.
 (pdftex.def)             Requested size: 227.62206pt x 227.63821pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 551.
+Package pdftex.def Info: um5.png  used on input line 601.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 551.
+Package pdftex.def Info: ENSIAS.png  used on input line 601.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[34 <./tech/kinde.jpeg>]
-<tech/stripe-logo.png, id=453, 770.88pt x 367.3725pt>
+[37 <./tech/kinde.jpeg>]
+<tech/stripe-logo.png, id=491, 770.88pt x 367.3725pt>
 File: tech/stripe-logo.png Graphic file (type png)
 <use tech/stripe-logo.png>
-Package pdftex.def Info: tech/stripe-logo.png  used on input line 555.
+Package pdftex.def Info: tech/stripe-logo.png  used on input line 605.
 (pdftex.def)             Requested size: 227.62206pt x 108.47484pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 565.
+Package pdftex.def Info: um5.png  used on input line 615.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 565.
+Package pdftex.def Info: ENSIAS.png  used on input line 615.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[35 <./tech/stripe-logo.png>]
-<tech/pandas-logo.png, id=459, 1927.2pt x 778.91pt>
+[38 <./tech/stripe-logo.png>]
+<tech/pandas-logo.png, id=497, 1927.2pt x 778.91pt>
 File: tech/pandas-logo.png Graphic file (type png)
 <use tech/pandas-logo.png>
-Package pdftex.def Info: tech/pandas-logo.png  used on input line 570.
+Package pdftex.def Info: tech/pandas-logo.png  used on input line 620.
 (pdftex.def)             Requested size: 227.62206pt x 91.9914pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 576--577
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+Underfull \hbox (badness 10000) in paragraph at lines 628--629
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 581.
+Package pdftex.def Info: um5.png  used on input line 631.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 581.
+Package pdftex.def Info: ENSIAS.png  used on input line 631.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[36 <./tech/pandas-logo.png>]
-<tech/sklearn-logo.png, id=466, 391.4625pt x 210.7875pt>
+[39 <./tech/pandas-logo.png>]
+<tech/sklearn-logo.png, id=503, 391.4625pt x 210.7875pt>
 File: tech/sklearn-logo.png Graphic file (type png)
 <use tech/sklearn-logo.png>
-Package pdftex.def Info: tech/sklearn-logo.png  used on input line 586.
+Package pdftex.def Info: tech/sklearn-logo.png  used on input line 636.
 (pdftex.def)             Requested size: 227.62206pt x 122.5656pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
+Underfull \hbox (badness 10000) in paragraph at lines 642--643
 
  []
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 595.
+Package pdftex.def Info: um5.png  used on input line 645.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 595.
+Package pdftex.def Info: ENSIAS.png  used on input line 645.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[37 <./tech/sklearn-logo.png>]
-<tech/openai-logo.png, id=472, 1927.2pt x 522.95375pt>
+[40 <./tech/sklearn-logo.png>]
+<tech/openai-logo.png, id=509, 1927.2pt x 522.95375pt>
 File: tech/openai-logo.png Graphic file (type png)
 <use tech/openai-logo.png>
-Package pdftex.def Info: tech/openai-logo.png  used on input line 600.
+Package pdftex.def Info: tech/openai-logo.png  used on input line 650.
 (pdftex.def)             Requested size: 227.62206pt x 61.76227pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
+Underfull \hbox (badness 10000) in paragraph at lines 656--657
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--609
+Underfull \hbox (badness 10000) in paragraph at lines 658--659
 
  []
 
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 661.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 661.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+[41 <./tech/openai-logo.png>]
+<screens/home.png, id=515, 2951.025pt x 1846.9pt>
+File: screens/home.png Graphic file (type png)
+<use screens/home.png>
+Package pdftex.def Info: screens/home.png  used on input line 666.
+(pdftex.def)             Requested size: 409.71692pt x 256.42245pt.
+<screens/pricing.png, id=516, 2951.025pt x 1846.9pt>
+File: screens/pricing.png Graphic file (type png)
+<use screens/pricing.png>
+Package pdftex.def Info: screens/pricing.png  used on input line 672.
+(pdftex.def)             Requested size: 409.71692pt x 256.42245pt.
+<screens/estimation.png, id=517, 2951.025pt x 1846.9pt>
+File: screens/estimation.png Graphic file (type png)
+<use screens/estimation.png>
+Package pdftex.def Info: screens/estimation.png  used on input line 678.
+(pdftex.def)             Requested size: 273.14923pt x 170.9483pt.
+<screens/estimation2.png, id=518, 2951.025pt x 1846.9pt>
+File: screens/estimation2.png Graphic file (type png)
+<use screens/estimation2.png>
+Package pdftex.def Info: screens/estimation2.png  used on input line 684.
+(pdftex.def)             Requested size: 273.14923pt x 170.9483pt.
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 687.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 687.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [42 <./screens/home.png> <./screens/pricing.png>]
+<screens/notif.png, id=526, 2951.025pt x 1846.9pt>
+File: screens/notif.png Graphic file (type png)
+<use screens/notif.png>
+Package pdftex.def Info: screens/notif.png  used on input line 690.
+(pdftex.def)             Requested size: 273.14923pt x 170.9483pt.
 \openout4 = `./transscr.txt'.
+
 
 
 Package pdftricks2 Warning: ****************************************
@@ -1448,32 +1544,32 @@ Package pdftricks2 Warning: ****************************************
 
 File: um5.png Graphic file (type png)
 <use um5.png>
-Package pdftex.def Info: um5.png  used on input line 611.
+Package pdftex.def Info: um5.png  used on input line 694.
 (pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
 File: ENSIAS.png Graphic file (type png)
 <use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 611.
+Package pdftex.def Info: ENSIAS.png  used on input line 694.
 (pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[38 <./tech/openai-logo.png>] (rapport.aux)
+[43 <./screens/estimation.png> <./screens/estimation2.png> <./screens/notif.png>] (rapport.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-05-08>
  ***********
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: CE4C5B2E9352B32BFA4D6A5F9755266E;5825.
+(rerunfilecheck)             Checksum: EF349DD1F3E3B8F5D63502318C7C40E2;5966.
  ) 
 Here is how much of TeX's memory you used:
- 28449 strings out of 474313
- 555802 string characters out of 5739307
- 1941907 words of memory out of 5000000
- 50351 multiletter control sequences out of 15000+600000
+ 28526 strings out of 474313
+ 557613 string characters out of 5739307
+ 1942907 words of memory out of 5000000
+ 50414 multiletter control sequences out of 15000+600000
  575214 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,16n,107p,920b,1147s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk><C:/Users/anass/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rapport.pdf (39 pages, 1030945 bytes).
+ <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk><C:/Users/anass/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on rapport.pdf (44 pages, 2317933 bytes).
 PDF statistics:
- 977 PDF objects out of 1000 (max. 8388607)
- 125 named destinations out of 1000 (max. 500000)
- 420 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1048 PDF objects out of 1200 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
+ 463 words of extra memory for PDF output out of 10000 (max. 10000000)
 

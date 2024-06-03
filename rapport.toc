@@ -1,39 +1,40 @@
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {1}Contexte et Objectfs}{9}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Contexte général}{9}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Problématique}{9}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Objectif}{10}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Méthodologie de développement et Planning du projet}{11}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Méthodologie de développement}{11}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Planning du projet}{12}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Le Web Scraping}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Définition}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Le Web Scraping dans notre Projet}{13}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Benchmark des Outils de Scraping}{13}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Méthodologie}{14}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Analyse et Conception}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Identification des Acteurs}{16}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Besoins Fonctionnels}{16}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Besoins Non Fonctionnels}{17}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Diagramme de cas d'utilsation}{18}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Diagramme d'activités}{21}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Diagramme de classes}{22}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Réalisation du projet}{23}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Collecte, exploration, nettoyage et modélisation}{23}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Collection de données : }{23}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Exploration et nettoyage des données : }{23}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Le modèle d’estimation du prix}{25}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Choix techniques}{26}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}scrapy}{26}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}ScrapeOps}{27}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}MongoDB}{28}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Prisma}{29}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}NextJS}{30}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Tailwind CSS}{31}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}Shadcn}{32}{subsection.5.2.7}%
-\contentsline {subsection}{\numberline {5.2.8}tRPC}{33}{subsection.5.2.8}%
-\contentsline {subsection}{\numberline {5.2.9}Kinde}{34}{subsection.5.2.9}%
-\contentsline {subsection}{\numberline {5.2.10}Stripe}{35}{subsection.5.2.10}%
-\contentsline {subsection}{\numberline {5.2.11}Pandas}{36}{subsection.5.2.11}%
-\contentsline {subsection}{\numberline {5.2.12}Scikit-learn}{37}{subsection.5.2.12}%
-\contentsline {subsection}{\numberline {5.2.13}OpenAI API}{38}{subsection.5.2.13}%
+\contentsline {chapter}{\numberline {1}Contexte et Objectfs}{10}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contexte général}{10}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Problématique}{10}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objectif}{11}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Méthodologie de développement et Planning du projet}{12}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Méthodologie de développement}{12}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Planning du projet}{13}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Le Web Scraping}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Définition}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Le Web Scraping dans notre Projet}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Benchmark des Outils de Scraping}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Méthodologie}{15}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Analyse et Conception}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Identification des Acteurs}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Besoins Fonctionnels}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Besoins Non Fonctionnels}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Diagramme de cas d'utilsation}{19}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Diagramme d'activités}{22}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Diagramme de classes}{23}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Réalisation du projet}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Collecte, exploration, nettoyage et modélisation}{25}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Collection de données : }{25}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Exploration et nettoyage des données : }{25}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Le modèle d’estimation du prix}{27}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Choix techniques}{29}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}scrapy}{29}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}ScrapeOps}{30}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}MongoDB}{31}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Prisma}{32}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}NextJS}{33}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Tailwind CSS}{34}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Shadcn}{35}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}tRPC}{36}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.9}Kinde}{37}{subsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.2.10}Stripe}{38}{subsection.5.2.10}%
+\contentsline {subsection}{\numberline {5.2.11}Pandas}{39}{subsection.5.2.11}%
+\contentsline {subsection}{\numberline {5.2.12}Scikit-learn}{40}{subsection.5.2.12}%
+\contentsline {subsection}{\numberline {5.2.13}OpenAI API}{41}{subsection.5.2.13}%
+\contentsline {section}{\numberline {5.3}Captures d'écran}{42}{section.5.3}%
