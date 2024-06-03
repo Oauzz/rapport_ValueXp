@@ -1,9 +1,24 @@
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramme de Gantt\relax }}{12}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagramme de Gantt}}{12}{figure.caption.4}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagramme de cas d'utilsation "Client Gratuit"\relax }}{18}{figure.caption.5}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagramme de cas d'utilsation "Client Abonné"\relax }}{19}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagramme de cas d'utilsation "Admin"\relax }}{20}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagramme de cas d'utilsation "Client Gratuit"}}{18}{figure.caption.5}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagramme de cas d'utilsation "Client Abonné"}}{19}{figure.caption.6}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagramme de cas d'utilsation "Admin"}}{20}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces activité de création du compte}}{21}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces activité d’estimation du prix}}{21}{figure.caption.9}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces scrapy logo}}{27}{figure.caption.10}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ScrapeOps logo}}{28}{figure.caption.11}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces MongoDB logo}}{29}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Prisma logo}}{30}{figure.caption.13}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces NextJS logo}}{31}{figure.caption.14}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Tailwind CSS logo}}{32}{figure.caption.15}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Shadcn logo}}{33}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces tRPC logo}}{34}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Kinde logo}}{35}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Stripe logo}}{36}{figure.caption.19}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Pandas logo}}{37}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces PandScikit-learnas logo}}{38}{figure.caption.21}%

@@ -373,17 +373,225 @@ culminated in the development of a web application that allows users to perform 
         \includegraphics[width=\textwidth]{uml-Admin.png}
     \caption{Diagramme de cas d'utilsation "Admin"}
 \end{figure}
-
 \newpage
-
 \section{Diagramme d'activités}
-\vspace{0.5cm}
+\vspace*{1cm}
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=\textwidth]{activity_account.png}
+    \caption{activité de création du compte}
+\end{figure}
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=0.5\textwidth]{activity_estimation.png}
+    \caption{activité d’estimation du prix}
+\end{figure}
+\newpage
 \section{Diagramme de classes}
 \vspace{0.5cm}
- 
 
+\newpage
+\chapter{Réalisation du projet}
+\section{Collecte, exploration, nettoyage et modélisation}
+\par Étant donné que les estimations des transactions immobilières requièrent des données de la réalité, nous avons décidé de collecter les informations à travers divers sites web marocains. 
+\subsection{Collection de données : }
+\par La première étape a été de déterminer ces sites web en utilisant l'outil similarweb.com .Nous avons sélectionné le site avito.ma en raison de son classement élevé dans la catégorie "E-commerce \& Shopping", avec un nombre de visiteurs compris entre 2,1 et 2,2 millions. Ce site web était riche en annonces immobilières, tant pour la vente que la location.
+\\ \par
+La deuxième étape a consisté à déterminer les attributs à collecter pour chaque type d'immobilier. Nous avons créé des annonces sur chaque site afin de découvrir les champs à remplir, et vérifié leur existence via la fonctionnalité de recherche d'annonces.
+\\ \par 
+Enfin, nous avons conçu un premier modèle simple pour enregistrer toutes les annonces, en appliquant des transformations sur les attributs pour harmoniser le format des données.Cette forme est spécifiée dans le tableau précédent au niveau du diagramme de classes.
+\subsection{Exploration et nettoyage des données : }
+\par 
+C'est souvent une tâche cruciale qui a un impact important sur la qualité et la fiabilité des analyses et des modèles ultérieurs. La gestion de données hétérogènes, la correction d'erreurs et d'incohérences, ainsi que la nécessité d'une expertise métier rendent le nettoyage des données difficile.
+\\ \par
+Dans un premier temps, nous explorons les données collectées. En raison des limites des règles de validation des sites web sources, nous avons remarqué que certains attributs numériques ne sont pas garantis d'être des nombres. Parfois, il s'agit d'intervalles ou de mots (comme dans le cas de l'âge de la propriété). Heureusement, cela concerne un ensemble limité de valeurs ordonnées que nous pouvons simplement remplacer par des nombres.
+\\ \par 
+Les annonces dupliquées sont également supprimées en se basant sur le lien comme critère. Cela ne couvre certainement pas le cas de plusieurs annonces différentes concernant la même propriété, mais nous supposons qu'elles sont négligeables.
+\\ \par
+Une remarque importante concerne l’analyse des attributs manquants. Pour le cas des prix manquants, nous avons remarqué que ces annonces ont une grande probabilité d’avoir plusieurs autres attributs manquants. Les annonceurs, dans ce cas, évitent de mentionner les détails sur leurs propriétés et demandent au client potentiel de les contacter pour les négociations. Étant donné que la valeur apportée par ces annonces est négligeable et qu'elles peuvent même limiter la performance de notre modèle IA, elles ne sont pas prises en considération.
+\\ \par
+Les prix fluctuent entre des extrêmes irréalistes, c’est pourquoi nous utilisons une méthode de nettoyage des données basée sur les quartiles. Elle permet de nettoyer un ensemble de données en supprimant les valeurs aberrantes du prix. Cette technique s'appuie sur la détection des anomalies basées sur les quartiles, où les valeurs inférieures au 10e percentile et supérieures au 90e percentile sont considérées comme des anomalies et sont donc éliminées.
+\par 
+Les valeurs de la colonne "ville" ont été converties en français pour les cas spéciaux contenant des mots en arabe.
+\\ \par
+Nous passons ainsi aux attributs particuliers à chaque type de propriété. Dans un premier temps, nous transformons ce dictionnaire en un tableau. À ce niveau, une grande partie des attributs est manquante. Nous observons les attributs booléens sous forme de liste et les transformons en plusieurs colonnes booléennes avec "True" signifiant la présence de l’option et vice-versa. Pour les attributs numériques avec des valeurs uniques et limites (nombre de chambres, de salons, etc.), les valeurs sont bornées supérieurement (par exemple, avoir ‘7+’ chambres). Dans ce cas, il suffit d’extraire le nombre.
+\\ \par
+Dans un deuxième temps, nous essayons d’extraire les valeurs manquantes à partir de la description. Après des investigations sur de petits échantillons de données, nous remarquons que la description contient parfois des informations supplémentaires qui ne sont pas déjà mentionnées. Une grande partie de ces descriptions souffre d’erreurs orthographiques, d’incohérences, et parfois elles ne contiennent même pas de français. Néanmoins, nous avons tenté d’utiliser la librairie spaCy pour une simple extraction des données. Cela commence par l'élimination des caractères irréguliers et des mots vides (stop words), et passe par la lemmatisation.
+\\ \par
+spaCy renvoie le noyau de dépendance d'un token à l'intérieur d'une phrase. Le noyau de dépendance représente le mot le plus important dont dépend le token courant sur le plan syntaxique. spaCy utilise l'analyse par dépendance pour analyser les relations entre les mots d'une phrase. Cependant, l’utilisation de cette technique en recherchant les appellations des attributs était insuffisante. Nous sommes donc passés à l’API OpenAI pour la détermination des attributs manquants. Puisqu’elle utilise le grand modèle de langage ChatGPT, elle comprend automatiquement la description avec la structure du modèle. Cependant, nous avons remarqué qu’elle remplace les valeurs des attributs déjà déterminés par d’autres valeurs différentes, ce qui confirme le problème de l'incohérence des données ayant des attributs manquants. En éliminant les annonces ayant plusieurs attributs manquants, les données sont suffisamment pertinentes (absence d'incohérence).
+\\ \par 
+Dans ce cas, nous trouvons que l’imputation est efficace. Nous utilisons l’imputation par les K plus proches voisins, qui est un algorithme d'imputation de valeurs manquantes simple, efficace et robuste, qui préserve la distribution des données d'origine. Il est particulièrement adapté aux ensembles de données avec des valeurs aberrantes et des types de données mixtes. Cela demande l’utilisation de la technique du one-hot encoding pour la transformation des données textuelles en données numériques.
+\\ \par
+Les dernières transformations consistent à remplacer le prix par le prix au mètre carré en divisant par la surface et à remplacer la date d’ajout de l’annonce par le nombre de jours depuis cet ajout. Enfin, nous inversons les effets du one-hot encoding.
+\subsection{Le modèle d’estimation du prix}
+\par
+Après avoir nettoyé les données, nous sommes finalement prêts à entraîner un modèle pour prédire ou estimer le prix, après avoir appliqué la technique du one-hot encoding. Nous avons choisi d’utiliser la forêt d'arbres décisionnels en raison de sa robustesse aux valeurs aberrantes et aux données non équilibrées, ainsi que de sa capacité à représenter les relations complexes. Malheureusement, elle s'est avérée incapable de prédire le prix avec une bonne précision (marge de 1000 dirhams).
+\\ \par
+Ensuite, nous avons utilisé la régression linéaire. Cette dernière permet de détecter les relations linéaires entre le prix et les autres attributs. Cette fois, le modèle s'est révélé performant en termes de précision et de rapidité, avec une marge inférieure à 20 dirhams.
+\newpage
+\section{Choix techniques}
+\subsection{scrapy}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tech/scrapy.png}
+    \caption{scrapy logo}
+    \label{fig:scrapy logo}
+\end{figure}
+\par
+Scrapy est un framework open-source en Python conçu pour le web scraping, qui consiste à extraire automatiquement des données à partir de sites web. Il est apprécié pour sa flexibilité et sa puissance, permettant aux développeurs de créer des spiders ou crawlers complexes pour collecter des informations à grande échelle. Scrapy offre une structure bien organisée pour gérer les différentes étapes du web scraping, allant de la requête initiale aux transformations des données extraites.\\ \par
+Le processus commence par la définition de spiders, qui sont des classes Python personnalisées. Ces spiders indiquent à Scrapy comment naviguer sur un site web spécifique et quels éléments HTML doivent être extraits. Grâce à Scrapy, les développeurs peuvent envoyer des requêtes HTTP, suivre les liens sur les pages web et extraire les données en utilisant des sélecteurs CSS et XPath. Ces sélecteurs permettent de cibler précisément les éléments souhaités, comme les titres, les descriptions, les prix, ou toute autre information pertinente présente dans le code HTML.\\ \par
+Les données extraites par Scrapy sont stockées dans des items, des structures de données définies par l'utilisateur, avant d'être passées par des pipelines de traitement. Les pipelines sont utilisés pour nettoyer, valider et transformer les données en formats plus utilisables ou pour les stocker directement dans des fichiers ou des bases de données. Par exemple, on peut formater des dates, éliminer des doublons ou convertir des valeurs de chaîne en valeurs numériques.
 
+\subsection{ScrapeOps}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{tech/scrapeops-logo.png}
+    \caption{ScrapeOps logo}
+    \label{fig:ScrapeOps logo}
+\end{figure}
+\par
+ScrapeOps est une plateforme dédiée à l'optimisation et à la gestion des opérations de web scraping, conçue pour les développeurs et les entreprises nécessitant une collecte efficace de données sur le web à grande échelle. Elle simplifie le processus de scraping grâce à ses multiples fonctionnalités, notamment le monitoring en temps réel des spiders, l'analyse des performances et la gestion avancée des proxies.
+\\ \par
+La gestion des proxies est une fonctionnalité essentielle de ScrapeOps, cruciale pour éviter les blocages IP et contourner les restrictions des sites web. La plateforme facilite la rotation et la gestion des pools de proxies, assurant une couverture globale et une continuité du scraping sans interruption. De plus, ScrapeOps propose des outils d'analyse détaillée qui permettent de comprendre les performances des spiders et d'identifier les problèmes potentiels, aidant ainsi les utilisateurs à optimiser leurs processus de scraping de manière proactive.
+\newpage
+\subsection{MongoDB}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{tech/mongodb.png}
+    \caption{MongoDB logo}
+    \label{fig:MongoDB logo}
+\end{figure}
+\par
+MongoDB est une base de données NoSQL orientée documents, conçue pour gérer des volumes massifs de données de manière flexible et évolutive. Elle stocke les données sous forme de documents JSON (JavaScript Object Notation) ou BSON (Binary JSON), permettant de représenter des données hiérarchiques complexes et de les manipuler plus efficacement. Les documents peuvent contenir des tableaux et des sous-documents imbriqués, offrant ainsi une flexibilité accrue pour modéliser des données non structurées ou semi-structurées sans les contraintes d'un schéma fixe.
+\\ \par
+Une des principales forces de cette solution réside dans sa capacité à gérer facilement des opérations de lecture et d'écriture à grande échelle grâce à son architecture distribuée. Les clusters permettent de répartir les données sur plusieurs serveurs (sharding), assurant ainsi une haute disponibilité et une tolérance aux pannes. De plus, elle offre des fonctionnalités robustes de réplication, ce qui permet de synchroniser les données entre plusieurs instances et de garantir leur durabilité et leur accessibilité, même en cas de défaillance matérielle.
+\\ \par
+Cette base de données intègre également un ensemble d'outils puissants pour la gestion et l'analyse des données. Avec l'agrégation, les utilisateurs peuvent effectuer des requêtes complexes et des transformations de données directement au sein de la base de données. Son service de base de données en tant que service (DBaaS), facilite le déploiement, la gestion et la mise à l'échelle des bases de données dans le cloud. Grâce à son écosystème riche en fonctionnalités, elle s'est imposée comme une solution de choix pour les applications modernes nécessitant une gestion flexible et efficace des données, allant des startups aux grandes entreprises.
+\newpage
+\subsection{Prisma}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{tech/prisma.png}
+    \caption{Prisma logo}
+    \label{fig:Prisma logo}
+\end{figure}
+\par
+Prisma est un ORM (Object-Relational Mapping) moderne et performant qui simplifie les interactions entre les applications et les bases de données en fournissant une API type-safe pour manipuler les données. Contrairement aux ORM traditionnels, Prisma se démarque par sa capacité à générer automatiquement des types et des schémas basés sur le modèle de la base de données, améliorant ainsi la productivité des développeurs et réduisant les erreurs de type lors de la compilation. Prisma prend en charge diverses bases de données et facilite les migrations entre celles-ci grâce à ses outils de migration de schéma intégrés.
+\\ \par
+Un aspect notable de Prisma est son moteur de requêtes, conçu pour optimiser les performances et simplifier les requêtes complexes. Les développeurs peuvent rédiger des requêtes en JavaScript ou TypeScript, que Prisma traduit ensuite en SQL performant tout en assurant la sécurité des types. Cette approche permet d'écrire un code plus lisible et maintenable, tout en profitant des performances et de l'efficacité des bases de données relationnelles. Prisma propose également des fonctionnalités avancées telles que la pagination, le filtrage et l'agrégation, facilitant ainsi l'exécution d'opérations complexes sur les données.
+\\ \par
+Prisma s'intègre parfaitement avec des frameworks populaires tels que Next.js, GraphQL et REST, permettant aux développeurs de créer des applications web et des API solides et évolutives. Avec une documentation complète et une communauté active, Prisma offre un support et des ressources abondantes pour aider les développeurs à exploiter pleinement cet outil puissant dans leurs projets de développement de base de données.
+\newpage
+\subsection{NextJS}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{tech/nextjs.png}
+    \caption{NextJS logo}
+    \label{fig:NextJS logo}
+\end{figure}
+\par
+Next.js est un framework de développement web basé sur React qui permet de créer des applications web modernes et performantes. Il est spécialement conçu pour simplifier le processus de développement grâce à des fonctionnalités comme le rendu côté serveur (SSR) et la génération de sites statiques (SSG), ce qui améliore considérablement la performance et le référencement des applications. Ce framework offre une structure de projet claire et des conventions de fichiers intuitives, facilitant ainsi l'organisation et la gestion du code. De plus, il prend en charge l'importation automatique des modules et l'optimisation des images, ce qui contribue à un développement plus fluide et efficace.
+\\ \par
+Un autre aspect clé de cette solution est son système de routage simplifié. En utilisant la structure de fichiers, les développeurs peuvent facilement créer des routes dynamiques sans avoir besoin de configurer un routeur explicitement. Ce système est complété par des fonctionnalités avancées comme le prefetching, qui permet de charger à l'avance les données nécessaires pour les pages suivantes, offrant ainsi une expérience utilisateur plus rapide et plus réactive. Next.js intègre également des API routes, permettant de gérer les requêtes HTTP directement dans l'application sans avoir à configurer un serveur backend séparé, ce qui simplifie le développement full-stack.
+\\ \par
+Cette solution est également reconnue pour sa flexibilité et ses capacités d'intégration avec d'autres outils et technologies. Elle supporte parfaitement TypeScript, ce qui permet d'améliorer la sécurité des types et la maintenabilité du code. De plus, elle peut être facilement intégrée avec des outils de gestion de données comme Prisma.
+\newpage
+\subsection{Tailwind CSS}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tech/tailwind.png}
+    \caption{Tailwind CSS logo}
+    \label{fig:Tailwind CSS logo}
+\end{figure}
+\par
+Tailwind CSS est un framework CSS utilitaire qui permet de créer des interfaces utilisateur modernes et réactives de manière efficace et rapide. Contrairement aux frameworks CSS traditionnels qui fournissent des composants prédéfinis, cette solution adopte une approche différente en offrant une vaste collection de classes utilitaires à faible niveau. Ces classes permettent aux développeurs de styliser directement leurs éléments HTML sans écrire de CSS personnalisé, réduisant ainsi la nécessité de quitter le fichier HTML pour modifier le style et accélérant le processus de développement. Cela rend également le code plus maintenable et cohérent.
+\\ \par
+Un des principaux avantages de cette solution est sa flexibilité et sa personnalisation. Les développeurs peuvent la configurer pour répondre aux besoins spécifiques de leur projet en ajustant les thèmes, les couleurs, les espacements, et bien d'autres aspects à travers un fichier de configuration centralisé. De plus, elle offre des fonctionnalités comme le purge CSS, qui supprime automatiquement les classes non utilisées lors de la production, réduisant ainsi la taille des fichiers CSS et améliorant les performances de chargement des pages. Cette flexibilité permet de créer des designs uniques sans être limité par des styles de composants prédéfinis, tout en conservant une structure de code propre et modulaire.
+\\ \par
+Cette solution a également une communauté active et en pleine croissance, ce qui signifie une multitude de ressources disponibles pour les développeurs, telles que des plugins, des extensions et des outils complémentaires. La documentation est exhaustive et bien organisée, ce qui facilite l'apprentissage et l'adoption rapide pour les nouveaux utilisateurs. De plus, elle s'intègre bien avec d'autres frameworks et outils populaires, comme React, Vue, et Next.js, permettant aux développeurs de l'utiliser dans divers environnements et projets. 
+\newpage
+\subsection{Shadcn}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{tech/shadcn.png}
+    \caption{Shadcn logo}
+    \label{fig:Shadcn logo}
+\end{figure}
+\par
+Shadcn est un framework CSS léger et modulaire qui simplifie le développement d'interfaces utilisateur modernes et esthétiques. En se concentrant sur l'essentiel, il fournit un ensemble de classes utilitaires simples mais puissantes pour styliser les éléments HTML. Ces classes permettent aux développeurs de créer rapidement des mises en page réactives et flexibles en appliquant des styles directement dans le HTML, sans avoir à écrire de CSS personnalisé. Cette approche réduit la complexité du code et accélère le flux de travail de développement, tout en offrant une grande liberté de personnalisation.
+\\ \par
+Un aspect distinctif de Shadcn est son approche centrée sur les ombres, qui permet aux développeurs d'ajouter facilement des effets d'ombre subtils et attrayants à leurs interfaces utilisateur. Le framework propose une variété d'options d'ombres, allant des ombres douces aux ombres plus prononcées, ce qui permet de créer des designs visuellement riches et dimensionnels. En plus, Shadcn offre également une gamme de fonctionnalités de conception telles que des espacements, des typographies et des couleurs prédéfinies, offrant ainsi un ensemble complet d'outils pour concevoir des interfaces utilisateur cohérentes et esthétiques.
+\\ \par
+Shadcn est conçu pour être facile à utiliser et à intégrer dans n'importe quel projet web. Son code est bien organisé et facile à comprendre, ce qui facilite la personnalisation et la maintenance du code pour les développeurs. De plus, Shadcn est compatible avec d'autres frameworks et bibliothèques populaires, ce qui permet aux développeurs de l'incorporer facilement dans leurs projets existants. 
+\newpage
+\subsection{tRPC}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tech/tRPC.png}
+    \caption{tRPC logo}
+    \label{fig:tRPC logo}
+\end{figure}
+\par
+tRPC est une bibliothèque moderne développée dans le but de simplifier la création d'APIs dans les applications web. Elle utilise une méthode déclarative qui offre aux développeurs la possibilité de définir rapidement des points d'API en utilisant une syntaxe simple et intuitive. 
+\\ \par
+Pour assurer la sécurité et la précision des types tout au long du processus de développement, tRPC utilise TypeScript. La vérification statique des types est fournie par TypeScript, ce qui permet de repérer et de corriger les erreurs avant même l'exécution du code.La mise en cache intégrée, la pagination automatique et la gestion transparente des erreurs sont des fonctionnalités avancées proposées par tRPC. Cela rend encore plus facile le processus de création des APIs. 
+\newpage
+\subsection{Kinde}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tech/kinde.jpeg}
+    \caption{Kinde logo}
+    \label{fig:Kinde logo}
+\end{figure}
+\par
+Kinde est une plateforme de gestion d'authentification simplifie le processus d'authentification des utilisateurs dans les applications web. Conçue pour être facile à intégrer et à utiliser, elle offre une variété de fonctionnalités robustes pour sécuriser l'accès aux applications, y compris la gestion des utilisateurs, la gestion des sessions et la prise en charge des protocoles d'authentification standards tels que OAuth et OpenID Connect. Grâce à son architecture flexible et modulaire, elle peut être facilement personnalisée pour répondre aux besoins spécifiques de chaque application, offrant ainsi aux développeurs un moyen simple et efficace de sécuriser leurs applications et de protéger les données des utilisateurs.
+\\ \par
+En plus de ses fonctionnalités de base, cette plateforme propose également des outils avancés de surveillance et de gestion des performances. Cela permet aux développeurs de suivre et d'analyser l'activité d'authentification de manière détaillée, et de prendre des mesures proactives pour optimiser les performances et garantir la disponibilité du système.
 
+\newpage
+\subsection{Stripe}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tech/stripe-logo.png}
+    \caption{Stripe logo}
+    \label{fig:Stripe logo}
+\end{figure}
+\par
+Stripe est une plateforme de paiement en ligne qui permet aux entreprises de toutes envergures d'accepter des paiements par carte de crédit, carte de débit, Apple Pay, Google Pay et d'autres méthodes de paiement populaires. Elle offre une solution simple et sécurisée pour encaisser des paiements en ligne, gérer des abonnements et envoyer des factures.
+\\ \par
+Stripe s'intègre facilement à divers sites web, applications mobiles ou plateformes de commerce électronique. Elle permet d'accepter des paiements en un clic, de créer des formulaires de paiement personnalisés et de gérer les paiements récurrents. La plateforme prend en charge toute la complexité du traitement des paiements, permettant aux entreprises de se concentrer sur leurs activités principales.
+\\ \par
+Stripe propose une large gamme d'outils pour aider les entreprises à gérer leurs activités et à stimuler leurs ventes. Il est possible de créer des factures personnalisées, d'envoyer des rappels de paiement, de gérer les remboursements et d'accéder à des rapports détaillés sur les transactions. La plateforme s'intègre également à de nombreux logiciels de comptabilité et de gestion d'entreprise populaires.
+\newpage
+\subsection{Pandas}
+\vspace{1cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tech/pandas-logo.png}
+    \caption{Pandas logo}
+    \label{fig:Pandas logo}
+\end{figure}
+\vspace{1cm}
+\par
+Pandas est une bibliothèque Python open-source conçue pour la manipulation et l'analyse de données, particulièrement efficace pour les données tabulaires structurées. Elle offre des structures de données performantes et flexibles (Series et DataFrames) pour organiser et manipuler des données hétérogènes.
+\\ \par
+Pandas propose un large éventail d'outils pour le nettoyage, la transformation et l'analyse de données : sélection et filtrage, calcul de statistiques, gestion des valeurs manquantes, regroupement et agrégation, manipulation de chaînes de caractères et de dates, etc. Elle intègre également des fonctions de visualisation de base pour explorer rapidement les données.
+\\ \par
+Pandas s'intègre parfaitement avec d'autres bibliothèques Python populaires comme NumPy (calculs numériques) et Matplotlib (création de graphiques). Cette synergie permet de combiner la puissance de calcul de NumPy avec les capacités de visualisation avancées de Matplotlib pour une analyse de données complète et efficace.
+\newpage
+\subsection{Scikit-learn}
+\vspace{1cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tech/sklearn-logo.png}
+    \caption{PandScikit-learnas logo}
+    \label{fig:Scikit-learn logo}
+\end{figure}
+\vspace{1cm}
+\par
+Scikit-learn est une bibliothèque Python open-source regroupant des algorithmes et des outils pour l'apprentissage automatique. Elle propose une large variété d'algorithmes supervisés et non supervisés, couvrant des tâches courantes comme la classification, la régression, le clustering et la réduction de dimension. Scikit-learn se concentre sur la simplicité d'utilisation et l'efficacité, rendant l'apprentissage automatique accessible à un large public.
+\\ \par 
+Scikit-learn propose des outils pour toutes les étapes d'un projet d'apprentissage automatique. On y retrouve des fonctions de prétraitement des données (nettoyage, transformation, normalisation), d'entraînement des modèles, d'évaluation des performances et de sélection des hyperparamètres. La bibliothèque se focalise sur la clarté du code et la reproductibilité des résultats.
 
 
 \end{document}
