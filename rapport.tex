@@ -420,7 +420,7 @@ Les valeurs de la colonne "ville" ont été converties en français pour les cas
 \\ \par
 Nous passons ainsi aux attributs particuliers à chaque type de propriété. Dans un premier temps, nous transformons ce dictionnaire en un tableau. À ce niveau, une grande partie des attributs est manquante. Nous observons les attributs booléens sous forme de liste et les transformons en plusieurs colonnes booléennes avec "True" signifiant la présence de l’option et vice-versa. Pour les attributs numériques avec des valeurs uniques et limitées (nombre de chambres, de salons, etc.), les valeurs sont bornées supérieurement (par exemple, avoir ‘7+’ chambres). Dans ce cas, il suffit d'en extraire le nombre.
 \\ \par
-Les dernières transformations s’agissent de remplacer le prix par le prix par mètre carré en divisant sur la surface et remplacer la date d’ajout de l’annonce par le nombre des jours depuis cet ajout.Les données collectées sont ensuite stockées dans la collection appropriée selon le type d’immobilier et la nature de la transaction.
+La dernière transformation s’agit de remplacer le prix par le prix par mètre carré en divisant sur la surface.Les données collectées sont ensuite stockées dans la collection appropriée selon le type d’immobilier et la nature de la transaction.
 \subsection{Le modèle d’estimation du prix}
 \par 
 En raison des règles de validation limitées des sites web sources, nous avons remarqué que certains attributs soi-disant numériques ne sont pas garantis d'être des nombres. Parfois, il s'agit d'intervalles ou de mots (comme dans le cas de l'âge de la propriété). Heureusement, cela concerne un ensemble limité de valeurs ordonnées que nous pouvons simplement remplacer par des nombres pour l'entraînement de l’IA.
