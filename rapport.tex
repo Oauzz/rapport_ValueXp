@@ -393,38 +393,38 @@ culminated in the development of a web application that allows users to perform 
 \newpage
 \chapter{Réalisation du projet}
 \section{Collecte, exploration, nettoyage et modélisation}
-\par Étant donné que les estimations des transactions immobilières requièrent des données de la réalité, nous avons décidé de collecter les informations à travers divers sites web marocains. 
+\par
+Étant donné que les estimations des transactions immobilières requièrent des données de la réalité, nous avons décidé de collecter les informations à travers divers sites web marocains. 
 \subsection{Collection de données : }
-\par La première étape a été de déterminer ces sites web en utilisant l'outil similarweb.com .Nous avons sélectionné le site avito.ma en raison de son classement élevé dans la catégorie "E-commerce \& Shopping", avec un nombre de visiteurs compris entre 2,1 et 2,2 millions. Ce site web était riche en annonces immobilières, tant pour la vente que la location.
+\par
+La première étape a été de déterminer ces sites web en utilisant l'outil similarweb.com .Nous avons sélectionné le site avito.ma en raison de son classement élevé dans la catégorie "E-commerce \& Shopping", avec un nombre de visiteurs compris entre 2,1 et 2,2 millions. Ce site web était riche en annonces immobilières, tant pour la vente que la location.
 \\ \par
 La deuxième étape a consisté à déterminer les attributs à collecter pour chaque type d'immobilier. Nous avons créé des annonces sur chaque site afin de découvrir les champs à remplir, et vérifié leur existence via la fonctionnalité de recherche d'annonces.
-\\ \par 
+\\ \par
 Enfin, nous avons conçu un premier modèle simple pour enregistrer toutes les annonces, en appliquant des transformations sur les attributs pour harmoniser le format des données.Cette forme est spécifiée dans le tableau précédent au niveau du diagramme de classes.
 \subsection{Exploration et nettoyage des données : }
-\par 
+\par
 C'est souvent une tâche cruciale qui a un impact important sur la qualité et la fiabilité des analyses et des modèles ultérieurs. La gestion de données hétérogènes, la correction d'erreurs et d'incohérences, ainsi que la nécessité d'une expertise métier rendent le nettoyage des données difficile.
 \\ \par
-Dans un premier temps, nous explorons les données collectées. En raison des limites des règles de validation des sites web sources, nous avons remarqué que certains attributs numériques ne sont pas garantis d'être des nombres. Parfois, il s'agit d'intervalles ou de mots (comme dans le cas de l'âge de la propriété). Heureusement, cela concerne un ensemble limité de valeurs ordonnées que nous pouvons simplement remplacer par des nombres.
-\\ \par 
-Les annonces dupliquées sont également supprimées en se basant sur le lien comme critère. Cela ne couvre certainement pas le cas de plusieurs annonces différentes concernant la même propriété, mais nous supposons qu'elles sont négligeables.
+Les annonces dupliquées sont supprimées en se basant sur le lien comme critère. Cela ne couvre certainement pas le cas de plusieurs annonces différentes concernant la même propriété, mais nous supposons qu'elles sont négligeables.
 \\ \par
-Une remarque importante concerne l’analyse des attributs manquants. Pour le cas des prix manquants, nous avons remarqué que ces annonces ont une grande probabilité d’avoir plusieurs autres attributs manquants. Les annonceurs, dans ce cas, évitent de mentionner les détails sur leurs propriétés et demandent au client potentiel de les contacter pour les négociations. Étant donné que la valeur apportée par ces annonces est négligeable et qu'elles peuvent même limiter la performance de notre modèle IA, elles ne sont pas prises en considération.
+Une remarque importante concerne l’analyse des attributs manquants.Nous essayons alors d’extraire les valeurs manquantes à partir de la description. Après des investigations sur de petits échantillons de données, nous remarquons que la description contient parfois des informations supplémentaires qui ne sont pas déjà mentionnées. Une grande partie de ces descriptions souffre d’erreurs orthographiques, d’incohérences, et parfois elles ne contiennent même pas de français. Néanmoins, Nous avons tenté d’utiliser la librairie spaCy pour une simple extraction des données. Cela commence par l'élimination des caractères irréguliers et des mots vides (stop words), et passe par la lemmatisation.
+\\ \par
+spaCy renvoie le noyau de dépendance d'un token à l'intérieur d'une phrase. Le noyau de dépendance représente le mot le plus important dont dépend le token courant sur le plan syntaxique. spaCy utilise l'analyse par dépendance pour examiner les relations entre les mots d'une phrase. Cependant, l’utilisation de cette technique pour rechercher les appellations des attributs (les mots-clés) s'est avérée insuffisante.
+\\ \par
+Nous sommes donc passés à l'API OpenAI pour la détermination des attributs manquants. Puisqu'elle utilise le grand modèle de langage ChatGPT, elle comprend automatiquement la description avec la structure du modèle. Nous utilisons cette API pour extraire des informations pertinentes et remplir ces champs. 
 \\ \par
 Les prix fluctuent entre des extrêmes irréalistes, c’est pourquoi nous utilisons une méthode de nettoyage des données basée sur les quartiles. Elle permet de nettoyer un ensemble de données en supprimant les valeurs aberrantes du prix. Cette technique s'appuie sur la détection des anomalies basées sur les quartiles, où les valeurs inférieures au 10e percentile et supérieures au 90e percentile sont considérées comme des anomalies et sont donc éliminées.
-\par 
+\par
 Les valeurs de la colonne "ville" ont été converties en français pour les cas spéciaux contenant des mots en arabe.
 \\ \par
-Nous passons ainsi aux attributs particuliers à chaque type de propriété. Dans un premier temps, nous transformons ce dictionnaire en un tableau. À ce niveau, une grande partie des attributs est manquante. Nous observons les attributs booléens sous forme de liste et les transformons en plusieurs colonnes booléennes avec "True" signifiant la présence de l’option et vice-versa. Pour les attributs numériques avec des valeurs uniques et limites (nombre de chambres, de salons, etc.), les valeurs sont bornées supérieurement (par exemple, avoir ‘7+’ chambres). Dans ce cas, il suffit d’extraire le nombre.
+Nous passons ainsi aux attributs particuliers à chaque type de propriété. Dans un premier temps, nous transformons ce dictionnaire en un tableau. À ce niveau, une grande partie des attributs est manquante. Nous observons les attributs booléens sous forme de liste et les transformons en plusieurs colonnes booléennes avec "True" signifiant la présence de l’option et vice-versa. Pour les attributs numériques avec des valeurs uniques et limitées (nombre de chambres, de salons, etc.), les valeurs sont bornées supérieurement (par exemple, avoir ‘7+’ chambres). Dans ce cas, il suffit d'en extraire le nombre.
 \\ \par
-Dans un deuxième temps, nous essayons d’extraire les valeurs manquantes à partir de la description. Après des investigations sur de petits échantillons de données, nous remarquons que la description contient parfois des informations supplémentaires qui ne sont pas déjà mentionnées. Une grande partie de ces descriptions souffre d’erreurs orthographiques, d’incohérences, et parfois elles ne contiennent même pas de français. Néanmoins, nous avons tenté d’utiliser la librairie spaCy pour une simple extraction des données. Cela commence par l'élimination des caractères irréguliers et des mots vides (stop words), et passe par la lemmatisation.
-\\ \par
-spaCy renvoie le noyau de dépendance d'un token à l'intérieur d'une phrase. Le noyau de dépendance représente le mot le plus important dont dépend le token courant sur le plan syntaxique. spaCy utilise l'analyse par dépendance pour analyser les relations entre les mots d'une phrase. Cependant, l’utilisation de cette technique en recherchant les appellations des attributs était insuffisante. Nous sommes donc passés à l’API OpenAI pour la détermination des attributs manquants. Puisqu’elle utilise le grand modèle de langage ChatGPT, elle comprend automatiquement la description avec la structure du modèle. Cependant, nous avons remarqué qu’elle remplace les valeurs des attributs déjà déterminés par d’autres valeurs différentes, ce qui confirme le problème de l'incohérence des données ayant des attributs manquants. En éliminant les annonces ayant plusieurs attributs manquants, les données sont suffisamment pertinentes (absence d'incohérence).
-\\ \par 
-Dans ce cas, nous trouvons que l’imputation est efficace. Nous utilisons l’imputation par les K plus proches voisins, qui est un algorithme d'imputation de valeurs manquantes simple, efficace et robuste, qui préserve la distribution des données d'origine. Il est particulièrement adapté aux ensembles de données avec des valeurs aberrantes et des types de données mixtes. Cela demande l’utilisation de la technique du one-hot encoding pour la transformation des données textuelles en données numériques.
-\\ \par
-Les dernières transformations consistent à remplacer le prix par le prix au mètre carré en divisant par la surface et à remplacer la date d’ajout de l’annonce par le nombre de jours depuis cet ajout. Enfin, nous inversons les effets du one-hot encoding.
+Les dernières transformations s’agissent de remplacer le prix par le prix par mètre carré en divisant sur la surface et remplacer la date d’ajout de l’annonce par le nombre des jours depuis cet ajout.Les données collectées sont ensuite stockées dans la collection appropriée selon le type d’immobilier et la nature de la transaction.
 \subsection{Le modèle d’estimation du prix}
-\par
+\par 
+En raison des règles de validation limitées des sites web sources, nous avons remarqué que certains attributs soi-disant numériques ne sont pas garantis d'être des nombres. Parfois, il s'agit d'intervalles ou de mots (comme dans le cas de l'âge de la propriété). Heureusement, cela concerne un ensemble limité de valeurs ordonnées que nous pouvons simplement remplacer par des nombres pour l'entraînement de l’IA.
+\\ \par
 Après avoir nettoyé les données, nous sommes finalement prêts à entraîner un modèle pour prédire ou estimer le prix, après avoir appliqué la technique du one-hot encoding. Nous avons choisi d’utiliser la forêt d'arbres décisionnels en raison de sa robustesse aux valeurs aberrantes et aux données non équilibrées, ainsi que de sa capacité à représenter les relations complexes. Malheureusement, elle s'est avérée incapable de prédire le prix avec une bonne précision (marge de 1000 dirhams).
 \\ \par
 Ensuite, nous avons utilisé la régression linéaire. Cette dernière permet de détecter les relations linéaires entre le prix et les autres attributs. Cette fois, le modèle s'est révélé performant en termes de précision et de rapidité, avec une marge inférieure à 20 dirhams.
@@ -592,6 +592,20 @@ Pandas s'intègre parfaitement avec d'autres bibliothèques Python populaires co
 Scikit-learn est une bibliothèque Python open-source regroupant des algorithmes et des outils pour l'apprentissage automatique. Elle propose une large variété d'algorithmes supervisés et non supervisés, couvrant des tâches courantes comme la classification, la régression, le clustering et la réduction de dimension. Scikit-learn se concentre sur la simplicité d'utilisation et l'efficacité, rendant l'apprentissage automatique accessible à un large public.
 \\ \par 
 Scikit-learn propose des outils pour toutes les étapes d'un projet d'apprentissage automatique. On y retrouve des fonctions de prétraitement des données (nettoyage, transformation, normalisation), d'entraînement des modèles, d'évaluation des performances et de sélection des hyperparamètres. La bibliothèque se focalise sur la clarté du code et la reproductibilité des résultats.
-
-
+\newpage
+\subsection{OpenAI API}
+\vspace{1cm}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{tech/openai-logo.png}
+    \caption{OpenAI logo}
+    \label{fig:OpenAI logo}
+\end{figure}
+\vspace{1cm}
+\par
+OpenAI est une organisation de recherche en intelligence artificielle (IA) à but non lucratif qui vise à développer des technologies d'IA sûres et bénéfiques pour l'humanité. Pour démocratiser l'accès à ses technologies de pointe, OpenAI propose une API (Interface de Programmation d'Application) permettant aux développeurs d'intégrer des fonctionnalités d'IA avancées dans leurs propres applications.
+\\ \par
+L'API OpenAI est conçue pour être intuitive et accessible à un large public, des développeurs débutants aux experts en IA. Elle fournit un ensemble d'outils et de services permettant d'interagir avec les modèles d'IA développés par OpenAI. Ces modèles couvrent une large gamme de tâches, notamment la génération de texte, la traduction des langues, la classification d'images et la création de code.
+\\ \par
+Grâce à l'API OpenAI, les développeurs peuvent facilement intégrer ces capacités d'IA dans leurs applications, ouvrant la voie à de nouvelles possibilités innovantes. Par exemple, un développeur pourrait utiliser l'API pour créer un chatbot conversationnel pour un service client, un outil de rédaction assistée par intelligence artificielle ou une application de traduction en temps réel. L'API OpenAI permet ainsi de repousser les limites de ce qui est possible avec l'IA et d'accélérer le développement d'applications intelligentes et performantes.
 \end{document}
