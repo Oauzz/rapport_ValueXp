@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.2)  3 JUN 2024 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.2)  3 JUN 2024 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1533,6 +1533,28 @@ File: screens/notif.png Graphic file (type png)
 <use screens/notif.png>
 Package pdftex.def Info: screens/notif.png  used on input line 690.
 (pdftex.def)             Requested size: 273.14923pt x 170.9483pt.
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 694.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 694.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+ [43 <./screens/estimation.png> <./screens/estimation2.png> <./screens/notif.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
+
+ []
+
+File: um5.png Graphic file (type png)
+<use um5.png>
+Package pdftex.def Info: um5.png  used on input line 705.
+(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
+File: ENSIAS.png Graphic file (type png)
+<use ENSIAS.png>
+Package pdftex.def Info: ENSIAS.png  used on input line 705.
+(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
+[44]
 \openout4 = `./transscr.txt'.
 
 
@@ -1542,15 +1564,7 @@ Package pdftricks2 Warning: ****************************************
 (pdftricks2)                to `./transscr.bat' and run it.
 (pdftricks2)                ****************************************.
 
-File: um5.png Graphic file (type png)
-<use um5.png>
-Package pdftex.def Info: um5.png  used on input line 694.
-(pdftex.def)             Requested size: 49.33669pt x 34.88257pt.
-File: ENSIAS.png Graphic file (type png)
-<use ENSIAS.png>
-Package pdftex.def Info: ENSIAS.png  used on input line 694.
-(pdftex.def)             Requested size: 32.89029pt x 32.89029pt.
-[43 <./screens/estimation.png> <./screens/estimation2.png> <./screens/notif.png>] (rapport.aux)
+(rapport.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-05-08>
@@ -1559,17 +1573,17 @@ Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: EF349DD1F3E3B8F5D63502318C7C40E2;5966.
  ) 
 Here is how much of TeX's memory you used:
- 28526 strings out of 474313
- 557613 string characters out of 5739307
+ 28527 strings out of 474313
+ 557620 string characters out of 5739307
  1942907 words of memory out of 5000000
  50414 multiletter control sequences out of 15000+600000
  575214 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,16n,107p,920b,1147s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1440.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\anass\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk><C:/Users/anass/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on rapport.pdf (44 pages, 2317933 bytes).
+Output written on rapport.pdf (45 pages, 2319807 bytes).
 PDF statistics:
- 1048 PDF objects out of 1200 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
+ 1052 PDF objects out of 1200 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
  463 words of extra memory for PDF output out of 10000 (max. 10000000)
 
